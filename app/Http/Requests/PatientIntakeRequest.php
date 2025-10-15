@@ -18,7 +18,7 @@ class PatientIntakeRequest extends FormRequest
             'patient_info.address' => 'required|string',
             'patient_info.date_of_service' => 'required|date',
             
-            'selection_info.insurance' => 'required|in:Medicare,Medicaid,Insurance,Self-Pay',
+            'selection_info.insurance' => 'required',
             'selection_info.vendor' => 'required|string|max:255',
             
             'physician_info.primary_physician' => 'nullable|string|max:255',
