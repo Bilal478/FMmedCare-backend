@@ -14,7 +14,8 @@ class BillingPayment extends Model
         'hcpcs', 'payer', 'total_claim_amount', 'allowed_amount', 
         'insurance_paid', 'date_paid', 'is_paid', 'notes',
         'authorization_yn', 'billing_status', 'date_of_service',
-        'date_claim_submission', 'claim_number', 'patient_intake_id'
+        'date_claim_submission', 'claim_number', 'patient_intake_id',  'patient_responsibility',
+        'total_paid_balance' 
     ];
 
     protected $casts = [

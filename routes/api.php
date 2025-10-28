@@ -43,10 +43,17 @@ Route::middleware('auth:sanctum')->group(function () {
     
 
     // Audit Trail Routes
-    Route::get('/audit-trail', [AuditTrailController::class, 'index']);
-    Route::get('/audit-trail/{id}', [AuditTrailController::class, 'show']);
-    Route::put('/audit-trail/{id}', [AuditTrailController::class, 'update']);
+    // Route::get('/audit-trail', [AuditTrailController::class, 'index']);
+    // Route::get('/audit-trail/{id}', [AuditTrailController::class, 'show']);
+    // Route::put('/audit-trail/{id}', [AuditTrailController::class, 'update']);
+    // Route::get('/audit-trail/export', [AuditTrailController::class, 'export']);
+
+    // Audit Trail Routes (Updated for patient intake based)
     Route::get('/audit-trail/export', [AuditTrailController::class, 'export']);
+    Route::get('/audit-trail', [AuditTrailController::class, 'index']);
+    Route::get('/audit-trail/{id}', [AuditTrailController::class, 'show']); // patient_intake_id
+    Route::put('/audit-trail/payments/{paymentId}', [AuditTrailController::class, 'updatePayment']);
+    
 
     // Dashboard Routes
     Route::get('/dashboard/stats', [DashboardController::class, 'stats']);
